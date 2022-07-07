@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    background: var(--bg-color);
+    font-family: 'Fira Code', monospace;
+    --bg-color: #fff;
+    --text-color: rgb(12, 12, 12);
+    --blue-color: #4169E1;
+}
+
+.dark-mode:root {
+    background: var(--bg-color);
+    font-family: 'Fira Code', monospace;
+    --bg-color: #362b28;
+    --text-color: rgb(255, 255, 255);
+    --blue-color: #3152c0;
+}
+
+
+
+
+
+
+@keyframes morph{
+    0%,100%{
+      border-radius:
+       42%56%72%28%/42%42%56%48%;
+   }
+    44%{
+   
+      border-radius:
+        72%28%48%48%/28%28%72%72%;
+   }
+    88%{
+      border-radius:
+        100%56%56%100%100%100%56%56%;
+    }
+}
+
+
+.blob{
+    margin: auto;
+    overflow: hidden;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 42%56%72%28%/42%42%56%48%;
+    background:var(--blue-color) url(/img/artedigital-sem-fundo.png);
+    background-size:cover;
+    background-position:center;
+    animation:morph 3.75s linear infinite;
+}
+
+h1{
+    font-size: 32px;
+    color: var(--text-color);
+    margin-top: 24px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background: url('/img/paleta.png');
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text 5.5s linear infinite;
+}
+
+@keyframes text {
+    from { background-position: 0% 50%; }
+    to { background-position: 100% 100%; }
+}
+
+
+.user-name{
+    font-family: 'Fira Code medium', monospace;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.container{
+    text-align: center;
+    width: 350px;
+    margin: 60px auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    margin: 48px 0;
+}
+
+ul li a{
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: var(--blue-color);
+    color: var(--bg-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+
+    transition: all 0.6s ease-in-out;
+    
+}
+
+ul li a:hover{
+    background: #0c42e2;
+    color: var(--text-color);
+
+}
+
+ul li a{
+
+    background-position-x: 150%;
+    transition:background-position-x 900ms;
+}
+
+ul li a:hover{
+
+    background-image:linear-gradient(
+       -60deg,
+       transparent,transparent 40%,
+       #ffffff44 40%,#ffffff44 60%,
+       transparent 60%,transparent 100%
+    );
+    background-size:200%100%;
+    background-repeat:no-repeat;
+    background-position-x:-150%;
+   }
+
+.iconify{ 
+    margin-right: 7px;
+}
+
+
+footer {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    transition: opacity 400ms;
+}
+
+footer:hover{
+    opacity: 1;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--text-color);
+}
